@@ -7,9 +7,7 @@ const Home = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setStage((prev) =>
-        prev === "name" ? "japanese" : prev === "japanese" ? "blank" : "name"
-      );
+      setStage((prev) => (prev === "name" ? "japanese" : "name"));
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -45,16 +43,7 @@ const Home = () => {
           </motion.h1>
         )}
 
-        {stage === "blank" && (
-          <motion.div
-            key="blank"
-            className="home-blank"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          />
-        )}
+        
       </AnimatePresence>
 
       <motion.p
@@ -63,7 +52,7 @@ const Home = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
       >
-        “I turn coffee into code — one line at a time.”
+        “Pushing beyond the Walls — one repo at a time.”
       </motion.p>
     </section>
   );
