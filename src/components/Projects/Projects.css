@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Crimson+Pro&display=swap");
+
+.berserk-section {
+  position: relative;
+  height: 100vh;
+  background: url("../../assets/berserk-bg.jpg") no-repeat center center/cover; /* Berserk-style BG */
+  color: #e0dede;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.berserk-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(1px);
+  z-index: 0;
+}
+
+.berserk-box {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  background: rgba(20, 20, 20, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.15);
+}
+
+.berserk-title {
+  font-family: "Cinzel", serif;
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+  color: #ff2c2c;
+  text-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+}
+
+.berserk-text {
+  font-family: "Crimson Pro", serif;
+  font-size: 1.1rem;
+  color: #d2cccc;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+
+.berserk-soon {
+  font-size: 1rem;
+  color: #999;
+  font-family: "Crimson Pro", serif;
+}

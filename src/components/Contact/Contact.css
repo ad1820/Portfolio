@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Open+Sans&display=swap');
+
+.kira-section {
+  height: 100vh;
+  background: url("../../assets/light.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #f4f4f4;
+  position: relative;
+  overflow: hidden;
+}
+
+.kira-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.kira-form-box {
+  position: relative;
+  z-index: 1;
+  background: rgba(10, 10, 10, 0.8);
+  border: 2px solid #a30000;
+  padding: 2.5rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  text-align: center;
+}
+
+.kira-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px #a30000;
+}
+
+.kira-quote {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+.kira-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.kira-form input,
+.kira-form textarea {
+  width: 100%;
+  background: #111;
+  color: #fff;
+  border: 1px solid #a30000;
+  padding: 0.6rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+}
+
+.kira-form button {
+  margin-top: 1rem;
+  background: #a30000;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.kira-form button:hover {
+  background: #cc0000;
+}
+
+.kira-thanks {
+  font-size: 1rem;
+  font-style: italic;
+  color: #b6b6b6;
+  margin-top: 1.5rem;
+  text-shadow: 0 0 5px red;
+}

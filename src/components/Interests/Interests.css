@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+.stats-section {
+  height: 100vh;
+  background: url("../../assets/sung-jinwoo.png") no-repeat center center/cover;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #a4baff;
+  position: relative;
+  overflow: hidden;
+}
+.stats-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* darkens bg for text readability */
+  z-index: 0;
+}
+.stats-box {
+    position: relative;
+  z-index: 1;
+  background: rgba(5, 5, 20, 0.8);
+  border: 2px solid #7c6eff;
+  border-radius: 16px;
+  padding: 2.5rem 3rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 40px rgba(124, 110, 255, 0.4);
+  text-shadow: 0 0 3px rgba(100, 200, 255, 0.2);
+}
+
+.stats-title {
+  font-size: 2rem;
+  color: #b6b9ff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #555;
+  padding-bottom: 1rem;
+}
+
+.stats-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: #dbe4ff;
+}
+
+.stats-line span {
+  color: #c9bfff;
+  font-weight: 600;
+}
+
+.divider {
+  border-top: 1px solid #666;
+  margin: 1.2rem 0;
+}
+
+.stats-footer {
+  margin-top: 2rem;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #8d8eff;
+  text-align: center;
+}

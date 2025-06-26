@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Unbounded:wght@500&display=swap");
+
+.gojo-section {
+  position: relative;
+  height: 100vh;
+  padding: 4rem 2rem;
+  background: url("../../assets/gojo-bg.jpg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* push content to bottom */
+  align-items: center;
+  overflow: hidden;
+}
+
+
+
+
+.gojo-glow {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle at center, rgba(140, 0, 255, 0.3), transparent 70%);
+  animation: pulseGlow 4s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.gojo-box {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  text-align: left;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5); /* dark semi-transparent card */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(149, 66, 255, 0.2);
+  margin-top: auto; /* pushes to bottom */
+}
+
+
+
+
+.gojo-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #c084fc;
+  text-shadow: 0 0 10px #9f7aea;
+}
+
+.gojo-dialogue {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #d9d9ff;
+}
+
+.gojo-content {
+  font-size: 1rem;
+  line-height: 1.7;
+  font-family: 'Unbounded', cursive;
+  color: #f1e7ff;
+}
+
+.gojo-highlight {
+  color: #b794f4;
+  font-weight: 600;
+}
+
+.gojo-signature {
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-style: italic;
+  color: #a78bfa;
+}

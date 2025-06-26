@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap");
+
+.home-section {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  background-image: url("../../assets/aot-bg.jpg"); /* AOT wall style image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.home-title {
+  z-index: 1;
+  font-size: 3rem;
+  font-family: "UnifrakturCook", serif;
+  color: #fefefe;
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.home-title-jp {
+  z-index: 1;
+  font-size: 3rem;
+  font-family: "UnifrakturCook", serif;
+  color: #faebd7;
+  letter-spacing: 4px;
+}
+
+.home-subtitle {
+  z-index: 1;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 300;
+  color: #d0d0d0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.home-blank {
+  height: 5rem;
+  z-index: 1;
+}
