@@ -6,9 +6,13 @@ import Interests from "./components/Interests/Interets";
 import Contact from "./components/Contact/Contact";
 import SectionWrapper from "./components/SectionWrapper/SectionWrapper";
 import Footer from "./components/Footer/Footer";
+
+import { Analytics } from "@vercel/analytics/react"
+
 function App() {
   return (
     <div>
+      <Analytics/>
       <Navbar />
       <SectionWrapper id="home">
         <Home />
