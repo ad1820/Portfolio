@@ -1,12 +1,35 @@
-# React + Vite
+# Aditya Patidar — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio showcasing full-stack, AI automation, and data-focused software projects.
 
-Currently, two official plugins are available:
+**Live site:** [portfolio-seven-delta-55.vercel.app](https://portfolio-seven-delta-55.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Built with
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Vercel Analytics
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Local development
+
+```bash
+git clone https://github.com/ad1820/Portfolio.git
+cd Portfolio
+npm install
+npm run dev
+```
+
+## Scripts
+
+| Command | Purpose |
+|---|---|
+| `npm run dev` | Start the local development server |
+| `npm run build` | Create a production build |
+| `npm run lint` | Run ESLint |
+| `npm run preview` | Preview the production build |
+
+## Featured work
+
+The portfolio highlights projects across AI-assisted automation, full-stack development, and analytics, including ApplyBot, FIFA World Cup Battle, and Story to Comic 2.0.
