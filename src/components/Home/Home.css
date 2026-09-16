@@ -1,53 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap");
-
-.home-section {
-  position: relative;
-  height: 100vh;
-  text-align: center;
-  color: white;
-  background-image: url("../../assets/aot-bg.jpg"); /* AOT wall style image */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 0;
-}
-
-.home-title {
-  z-index: 1;
-  font-size: 3rem;
-  font-family: "UnifrakturCook", serif;
-  color: #fefefe;
-  text-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-}
-
-.home-title-jp {
-  z-index: 1;
-  font-size: 3rem;
-  font-family: "UnifrakturCook", serif;
-  color: #faebd7;
-  letter-spacing: 4px;
-}
-
-.home-subtitle {
-  z-index: 1;
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  font-style: italic;
-  font-weight: 300;
-  color: #d0d0d0;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-
-.home-blank {
-  height: 5rem;
-  z-index: 1;
-}
+.home-section, .about-section { position: relative; min-height: 100vh; padding: 8.5rem max(1.5rem, calc((100vw - 1180px)/2)) 8rem; display: grid; grid-template-columns: 1.3fr .7fr; align-items: center; gap: 4rem; overflow: hidden; color: #f4f7ff; font-family: "DM Sans", sans-serif; }
+.home-section { background: #080c13; }
+.home-atmosphere { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,9,15,.96), rgba(5,9,15,.77) 45%, rgba(5,9,15,.2) 82%), linear-gradient(0deg, #080c13 0%, transparent 30%), url("../../assets/aot-bg.jpg") center/cover; }
+.home-atmosphere::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px); background-size: 100% 56px; opacity: .32; }
+.home-copy, .home-note { position: relative; z-index: 2; }
+.home-label, .about-label { display: block; color: #ff5969; font-size: .72rem; text-transform: uppercase; letter-spacing: .18em; font-weight: 600; }
+.home-copy h1, .about-copy h2 { margin: 1.15rem 0; font: 700 clamp(4.5rem, 10vw, 9rem)/.78 "Space Grotesk", sans-serif; letter-spacing: -.085em; }
+.home-copy h1 span, .about-copy h2 span { display: block; }
+.home-subtitle, .about-subtitle { margin: 0 0 1rem; font: 600 clamp(1.25rem, 2.5vw, 2rem)/1.25 "Space Grotesk", sans-serif; }
+.home-intro, .about-intro { max-width: 650px; color: #aab2bf; font-size: 1.04rem; line-height: 1.75; }
+.home-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+.home-actions a { padding: .85rem 1.15rem; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: .86rem; transition: transform .2s; }.home-actions a:hover { transform: translateY(-3px); }
+.home-primary { color: #fff; background: #ff4e60; }.home-secondary { color: #fff; border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.05); }
+.home-note, .about-note { align-self: center; padding: 1.55rem; max-width: 350px; border-left: 2px solid #ff5969; background: rgba(7,11,17,.64); backdrop-filter: blur(12px); }
+.home-note span, .about-note span { color: #ff7180; text-transform: uppercase; letter-spacing: .15em; font-size: .68rem; }.home-note p, .about-note p { margin: .8rem 0 0; font: 500 1.15rem/1.55 "Space Grotesk", sans-serif; }
+.home-stats, .about-stats { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.15); background: rgba(5,9,15,.66); backdrop-filter: blur(14px); }
+.home-stats div, .about-stats div { padding: 1.45rem max(1.5rem, calc((100vw - 1180px)/6)); border-right: 1px solid rgba(255,255,255,.13); display: flex; flex-direction: column; gap: .3rem; }.home-stats div:last-child, .about-stats div:last-child { border-right: 0; }
+.home-stats strong, .about-stats strong { color: #ff7180; font: 600 clamp(1.35rem, 2.5vw, 2rem) "Space Grotesk"; }.home-stats span, .about-stats span { color: #8f98a5; font-size: .68rem; text-transform: uppercase; letter-spacing: .12em; }
+@media (max-width: 760px) { .home-section, .about-section { min-height: 100svh; padding: 7rem 1.2rem 12rem; grid-template-columns: 1fr; gap: 2rem; }.home-copy h1, .about-copy h2 { font-size: clamp(4rem, 21vw, 6.5rem); }.home-note, .about-note { align-self: auto; }.home-stats, .about-stats { grid-template-columns: 1fr; }.home-stats div, .about-stats div { padding: .75rem 1.2rem; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.1); flex-direction: row; justify-content: space-between; align-items: center; }.home-stats strong, .about-stats strong { font-size: 1rem; } }

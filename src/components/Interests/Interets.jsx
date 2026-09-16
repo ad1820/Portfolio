@@ -1,103 +1,23 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { motion } from "framer-motion";
 import "./Interests.css";
 
-const Interests = () => {
-  const interests = [
-    { category: "Football", description: "Strategic gameplay and team coordination" },
-    { category: "Anime", description: "Narrative depth and character development" },
-    { category: "Formula 1", description: "Precision engineering and tactical racing" },
-    { category: "Classic Literature", description: "Timeless wisdom and perspective" },
-    { category: "Metal/Grunge", description: "Raw expression and emotional intensity" },
-    { category: "Instruments", description: "Creative discipline and technical mastery" },
-  ];
+const interests = ["Football", "Anime", "Classic literature"];
 
-  const [currentInterestIndex, setCurrentInterestIndex] = useState(0);
-
-  const nextInterest = () => {
-    setCurrentInterestIndex((prev) => (prev + 1) % interests.length);
-  };
-
-  const prevInterest = () => {
-    setCurrentInterestIndex((prev) => (prev - 1 + interests.length) % interests.length);
-  };
-
-  const goToInterest = (index) => {
-    setCurrentInterestIndex(index);
-  };
-
-  return (
-    <section id="interests" className="stats-section">
-      <div className="stats-overlay" />
-      <motion.div
-        className="stats-box"
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-      >
-        <div className="stats-header">
-          <h2 className="stats-title">[ Status Window ]</h2>
-          <div className="shadow-indicator">Shadow Monarch</div>
-        </div>
-
-        <div className="stats-grid">
-          <div className="stat-item">
-            <div className="stat-label">Name</div>
-            <div className="stat-value">Aditya Patidar</div>
-          </div>
-          <div className="stat-item">
-            <div className="stat-label">Class</div>
-            <div className="stat-value">Shadow Developer</div>
-          </div>
-        </div>
-
-        <div className="divider" />
-
-        <div className="interests-section">
-          <h3 className="interests-title">Interests & Pursuits</h3>
-          
-          <div className="carousel-wrapper">
-            <button className="carousel-btn carousel-btn-left" onClick={prevInterest}>
-              <span>‹</span>
-            </button>
-
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentInterestIndex}
-                className="interest-item"
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-              >
-                <div className="interest-category">{interests[currentInterestIndex].category}</div>
-                <div className="interest-description">{interests[currentInterestIndex].description}</div>
-              </motion.div>
-            </AnimatePresence>
-
-            <button className="carousel-btn carousel-btn-right" onClick={nextInterest}>
-              <span>›</span>
-            </button>
-          </div>
-
-          <div className="carousel-indicators">
-            {interests.map((_, index) => (
-              <button
-                key={index}
-                className={`indicator ${index === currentInterestIndex ? "active" : ""}`}
-                onClick={() => goToInterest(index)}
-                aria-label={`Go to interest ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
-
-        <p className="stats-footer">
-          "The only way to grow stronger is to keep moving forward."
-        </p>
-      </motion.div>
-    </section>
-  );
-};
+const Interests = () => (
+  <section id="interests" className="interests-section">
+    <div className="interests-atmosphere" />
+    <motion.div className="interests-copy" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+      <span className="interests-label">03 · When the laptop is pretending to rest</span>
+      <h2><span>THAT’S WHAT</span><span>I DO.</span></h2>
+      <p className="interests-subtitle">Football, anime, and books old enough to judge me.</p>
+      <p className="interests-intro">I watch football like the manager is waiting for my tactical advice, consume anime as serious cultural research, and read classic literature to confirm that people have always been complicated.</p>
+      <div className="interest-pills">{interests.map((interest) => <span key={interest}>{interest}</span>)}</div>
+    </motion.div>
+    <motion.aside className="interests-note" initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+      <span>Status window</span><p>Employed: technically no.<br />Building things: aggressively yes.</p>
+    </motion.aside>
+    <div className="interests-stats"><div><strong>Football</strong><span>weekend tactics department</span></div><div><strong>Anime</strong><span>serious research</span></div><div><strong>Books</strong><span>old people had points</span></div></div>
+  </section>
+);
 
 export default Interests;

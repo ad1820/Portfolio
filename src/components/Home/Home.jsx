@@ -1,61 +1,21 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import "./Home.css";
 
-const Home = () => {
-  const [stage, setStage] = useState("name");
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setStage((prev) => (prev === "name" ? "japanese" : "name"));
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <section id="home" className="home-section">
-      <div className="home-overlay" />
-
-      <AnimatePresence mode="wait">
-        {stage === "name" && (
-          <motion.h1
-            key="name"
-            className="home-title"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.1 }}
-            transition={{ duration: 0.6 }}
-          >
-            ADITYA PATIDAR
-          </motion.h1>
-        )}
-
-        {stage === "japanese" && (
-          <motion.h1
-            key="jp"
-            className="home-title-jp"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.6 }}
-          >
-            アディティヤ・パティダー
-          </motion.h1>
-        )}
-
-        
-      </AnimatePresence>
-
-      <motion.p
-        className="home-subtitle"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6 }}
-      >
-        “Pushing beyond the Walls — one repo at a time.”
-      </motion.p>
-    </section>
-  );
-};
+const Home = () => (
+  <section id="home" className="home-section">
+    <div className="home-atmosphere" />
+    <motion.div className="home-copy" initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+      <span className="home-label">Backend · Applied AI · Competitive Programming</span>
+      <h1><span>ADITYA</span><span>PATIDAR</span></h1>
+      <p className="home-subtitle">I build things. Sometimes they even work.</p>
+      <p className="home-intro">Mostly backend systems, applied AI, and side projects that begin with “this should be easy” and end three databases later.</p>
+      <div className="home-actions"><a href="#projects" className="home-primary">See what survived ↘</a><a href="#contact" className="home-secondary">Say hello</a></div>
+    </motion.div>
+    <motion.aside className="home-note" initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: .3 }}>
+      <span>Current situation</span><p>Teaching computers to do the boring parts so I can debug the interesting ones.</p>
+    </motion.aside>
+    <div className="home-stats"><div><strong>Code</strong><span>mostly intentional</span></div><div><strong>Applied AI</strong><span>useful, not sprinkled</span></div><div><strong>Sleep</strong><span>under negotiation</span></div></div>
+  </section>
+);
 
 export default Home;
