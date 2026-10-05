@@ -6,3 +6,14 @@
 .about-intro { color: #bdb2c9; }
 .about-note { border-left-color: #a85cff; background: rgba(15,7,26,.68); }.about-note span { color: #c790ff; }
 .about-stats { background: rgba(12,5,22,.7); }.about-stats strong { color: #be7cff; }
+.about-skills { max-width: 430px; }
+.about-skills > span { display: block; margin-bottom: 1.1rem; }
+.skill-group + .skill-group { margin-top: 1rem; }
+.skill-group strong { display: block; margin-bottom: .55rem; color: #f4edff; font: 600 .82rem "Space Grotesk", sans-serif; letter-spacing: .02em; }
+.skill-list { display: flex; flex-wrap: wrap; gap: .42rem; }
+.about-note .skill-list span { padding: .38rem .58rem; border: 1px solid rgba(190,124,255,.25); border-radius: 999px; color: #d8baff; background: rgba(178,93,255,.08); font-size: .7rem; letter-spacing: .01em; text-transform: none; }
+
+@media (max-width: 760px) {
+  .about-section { padding-bottom: 13rem; }
+  .about-skills { max-width: none; }
+}

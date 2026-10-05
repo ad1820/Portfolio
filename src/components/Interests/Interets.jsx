@@ -14,7 +14,7 @@ const Interests = () => (
       <div className="interest-pills">{interests.map((interest) => <span key={interest}>{interest}</span>)}</div>
     </motion.div>
     <motion.aside className="interests-note" initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-      <span>Status window</span><p>Employed: technically no.<br />Building things: aggressively yes.</p>
+      <span>Status window</span><p>Shipping software professionally.<br />Building side projects: aggressively yes.</p>
     </motion.aside>
     <div className="interests-stats"><div><strong>Football</strong><span>weekend tactics department</span></div><div><strong>Anime</strong><span>serious research</span></div><div><strong>Books</strong><span>old people had points</span></div></div>
   </section>
